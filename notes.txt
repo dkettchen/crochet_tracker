@@ -1,0 +1,206 @@
+w3s tutorial for all things svg:
+
+https://www.w3schools.com/graphics/svg_marker.asp
+
+
+brainstorming:
+-I think we want a line with markers to mark double crochets etc
+-the normal chain & slip stitch marks are just circles/dots -> should be easy!
+-we can program vector graphics -> could have default code & then modify its coordinates
+
+-and you can change stuff -> like colour!
+
+where I left off: https://www.w3schools.com/graphics/svg_intro.asp
+
+
+learning about XML:
+
+-(learning XML is relevant to work bc we have that big XML file w network info in matt's parser, right? 
+I wanna be able to get data out of that!)
+
+-XML is for sharing data (platform independantly), not for displaying it (like HTML would be) 
+    -> it needs other software to display it 
+-you define your own tags, no pre-defined tags like HTML has
+-stores data in plain text format
+-made to be both machine & human readable
+-often used in web development
+-presentation-independant
+-often used to complement HTML
+-> data separate from HTML
+-first line with encoding etc starting with <?xml ...> is called prolog & optional
+-attributes must be in quotes (ie lang="en"), but can be double or single quotes
+-you can have a self-closing tag like such: <selfcloser />
+-elements can be empty (no content between tags)
+-if we want to use special characters that have other meanings in xml (like <) in a text bit, 
+we need to use their "entity reference"
+    &lt; 	< 	less than
+    &gt; 	> 	greater than
+    &amp; 	& 	ampersand 
+    &apos; 	' 	apostrophe
+    &quot; 	" 	quotation mark
+-element names are case sensitive
+-can't start with the letters xml 
+-element names can contain letters, digits, hyphens, underscores, and periods
+-but no spaces!
+-avoid dashes and points as it'll get confused
+-you can have special chars but it software might not like them
+-metadata should be attributes, everything else should be elements
+-you can use a name prefix to avoid namespace conflicts between diff xml sources ex <h:table>
+    -but then you need to define a namespace with a xmlns attritbute in the start tag of an element
+    ex <h:table xmlns:h="http://www.w3.org/TR/html4/">
+    -> then all the children with that prefix are associated w the same namespace
+    Q: wtf is a namespace
+        "a class of elements (e.g. addresses, file locations, etc.) in which each element has a name 
+        unique to that class, although it may be shared with elements in other classes."
+    -you can also define it in the root element
+    -URI is used to give unique name, but can also double as pointing to web page that 
+    contains namespace info
+-A Uniform Resource Identifier (URI) is a string of characters which identifies an Internet Resource.
+The most common URI is the Uniform Resource Locator (URL) which identifies an Internet domain address. 
+Another, not so common type of URI is the Uniform Resource Name (URN).
+-can also use a default namespace for an element -> no need to prefix everything
+
+-XMLHttpRequest can be used to:
+    Update a web page without reloading the page
+    Request data from a server - after the page has loaded
+    Receive data from a server  - after the page has loaded
+    Send data to a server - in the background
+-> ex showing suggestions as you type!!
+Q: how it do that tho?? I looked at the js code but still don't understand :c
+
+-browser parses text in xml format into a xml DOM (document object model) object
+-XMLHttpRequest has a builtin parser!
+    The responseText property returns the response as a string.
+    The responseXML property returns the response as an XML DOM object.
+-DOM makes doc into an accessible tree-structure so you can manipulate the document!
+    ex document.getElementById('demo').innerHTML accesses the content of any HTML element 
+    with the id="demo"
+    ex xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue; 
+    gets the first element with tag "title" in the doc
+
+-Xpath is used to navigate XML docs
+-has library of standard functions
+-major element in xslt and xquery
+-examples of expressions:
+    XPath Expression 	                Result
+    /bookstore/book[1] 	                Selects the first book element that is the child of the bookstore 
+                                        element
+    /bookstore/book[last()] 	        Selects the last book element that is the child of the bookstore 
+                                        element
+    /bookstore/book[last()-1] 	        Selects the last but one book element that is the child of the 
+                                        bookstore element
+    /bookstore/book[position()<3] 	    Selects the first two book elements that are children of the 
+                                        bookstore element
+    //title[@lang] 	                    Selects all the title elements that have an attribute named lang
+    //title[@lang='en'] 	            Selects all the title elements that have a "lang" attribute with 
+                                        a value of "en"
+    /bookstore/book[price>35.00] 	    Selects all the book elements of the bookstore element that have 
+                                        a price element with a value greater than 35.00
+    /bookstore/book[price>35.00]/title 	Selects all the title elements of the book elements of the 
+                                        bookstore element that have a price element with a value greater 
+                                        than 35.00
+
+-XSLT is XML's stylesheet language!
+-used to turn XML into HTML
+-"much more sophisticated than CSS" wow drag her wtf lol
+-example:
+    <?xml version="1.0" encoding="UTF-8"?>
+    <html xsl:version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <body style="font-family:Arial;font-size:12pt;background-color:#EEEEEE">
+            <xsl:for-each select="breakfast_menu/food">
+                <div style="background-color:teal;color:white;padding:4px">
+                    <span style="font-weight:bold">
+                        <xsl:value-of select="name"/> - 
+                    </span>
+                    <xsl:value-of select="price"/>
+                </div>
+                <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
+                    <p>
+                        <xsl:value-of select="description"/>
+                        <span style="font-style:italic"> 
+                            (<xsl:value-of select="calories"/> calories per serving)
+                        </span>
+                    </p>
+                </div>
+            </xsl:for-each>
+        </body>
+    </html> 
+
+-XQuery is for querying XML:
+-example:
+    for $x in doc("books.xml")/bookstore/book
+    where $x/price>30
+    order by $x/title
+    return $x/title
+-to XML what SQL is to DBs
+-xpath and xquery share data model, functions and operators -> transferrable knowledge/skills
+
+-XLink is used to hyperlink in XML docs
+-any element can be a link
+-example:
+    <?xml version="1.0" encoding="UTF-8"?>
+    <homepages xmlns:xlink="http://www.w3.org/1999/xlink">
+        <homepage xlink:type="simple" xlink:href="https://www.w3schools.com">Visit W3Schools</homepage>
+        <homepage xlink:type="simple" xlink:href="http://www.w3.org">Visit W3C</homepage>
+    </homepages> 
+-"To get access to the XLink features we must declare the XLink namespace. 
+The XLink namespace is: "http://www.w3.org/1999/xlink"."
+-any attributes come from that namespace 
+    xlink:type="simple" creates a simple "HTML-like" link
+    xlink:href attribute specifies the URL to link to (in this case - an image)
+    xlink:show="new" specifies that the link should open in a new window
+-reference
+    Attribute 	    Value 	                        Description
+    xlink:actuate 	onLoad,onRequest,other,none 	Defines when the linked resource is read and shown:
+                                                        - onLoad - the resource should be loaded and 
+                                                        shown when the document loads
+                                                        - onRequest - the resource is not read 
+                                                        or shown before the link is clicked
+    xlink:href 	    URL 	                        Specifies the URL to link to
+    xlink:show 	    embed,new,replace,other,none 	Specifies where to open the link. Default is "replace"
+    xlink:type 	    simple,extended,locator,arc,    Specifies the type of link
+                    resource,title,none 	
+
+-xpointer points to specific parts of XML file 
+-uses xpath 
+-not supported in browsers but used by other xml languages
+-links to specific parts of file while xlink links to whole file
+-uses # - ex.: xlink:href="https://dog.com/dogbreeds.xml#xpointer(id('Rottweiler'))"
+-has a shortcut for ids: xlink:href="https://dog.com/dogbreeds.xml#Rottweiler".
+
+-DTD - document type definition
+-separate file that defines the schema for the file!
+-link to it in the file: <!DOCTYPE note SYSTEM "Note.dtd"> for their root <note> example
+-file version doesn't seem to work for me huh
+-but you can also just put the schema at the top of your actual XML file!
+-if you have repeat elements, they gotta be repeated in the schema too, 
+need to figure out how to make that number independant
+-can also be used to define !ENTITYs, eg repeat info like what you might want to put into a footer
+-is accessed via & notation
+    -tutorial if we want to learn more: https://www.w3schools.com/xml/xml_dtd_intro.asp
+-dtd should be used for big xml (may be waste of time on small ones) after your application works, 
+bc you don't want to run into validation errors for no reason
+
+-XML schema is a different way of writing the schema info, more compatible w XML
+-supports data types!
+-wrap in schema tag:
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    </xs:schema>
+-xsd file, needs to be linked in root tag like so:
+    <STITCHES
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="crochet.xsd"
+    >
+
+-XML are plain text files -> can be made without special software & saved to a web server 
+-you can generate XML files from various server sources, incl databases
+
+
+ajax tutorial: https://www.w3schools.com/xml/ajax_intro.asp
+    AJAX is a developer's dream, because you can:
+        Update a web page without reloading the page
+        Request data from a server - after the page has loaded
+        Receive data from a server - after the page has loaded
+        Send data to a server - in the background
+-> useful for later
+-AJAX stands for Asynchronous JavaScript And XML.

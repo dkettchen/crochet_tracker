@@ -1,0 +1,161 @@
+<svg 
+    width="auto"
+    height="auto"
+    viewBox="0 0 800 800"
+    preserveAspectRatio="xMidYMid meet"
+
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+<!-- 
+viewBox -> defines the "units" in proportion to which we define numbers below (ie 800 total -> 400 == 50%)
+width & height -> defines how to actually scale the image when showing in browser etc (ie auto -> fit to window)
+preserveAspectRatio -> defines how to align image in given space (ie window)
+    camelCase!
+    xMidYMid -> centered
+    can also replace Mid w Min or Max to align with either side
+    meet -> in CSS would be background-size:contain
+    OR slice -> in CSS would be background-size:cover
+    OR none -> scales like raster image, distorting ratio to fit (ie stretch etc)
+        (can't seem to make that one work tho so idk
+-->
+
+<!-- TODO 
+-add chain stitch version of 3 doubles for start of round ✅
+-add slip stitch too ✅
+-add sub sections for each double ✅
+-add labels for each stitch (ie class or smth to identify which stitch it is)
+-figure out how to order in order of making - ie which stitches come first
+-figure out how to colour code individual items properly -> what structure do we need?
+
+    -have each stitch as one item
+    -have stitch items in order
+    -grouped by round
+    -have js(?) code to change their colour as you go through em?
+        -we'll need a list of all our stitch items in order for this
+        -> make a xml list or stitches to then connect to svg to illustrate??
+
+-->
+
+<g id="granny_square_pattern" stroke-width="3">
+    <title>Basic Granny Square</title>
+
+    <g id="round_1" stroke="black" fill="black"> <!-- inner circle of chain stitches -->
+        <ellipse id="chain" ry="5" rx="15" cx="400" cy="372" fill="none"/>
+        <use href="#chain" transform="rotate(110, 400, 400)"/>
+        <use href="#chain" transform="rotate(190, 400, 400)"/>
+        <use href="#chain" transform="rotate(-80, 400, 400)"/>
+    </g>
+
+    <g id="round_2" stroke="red" fill="red"> <!-- first circle of doubles -->
+        <g id="3_doubles"> <!-- 3 doubles arranged in \|/ orientation -->
+            <g id="double_left">
+                <line id="double_long_1" y2="282" x2="355" y1="357" x1="385" fill="none"/>
+                <line id="double_cross_line" y2="282" x2="370" y1="282" x1="340" fill="none"/>
+                <use href="#double_cross_line" transform="rotate(10, 272, 340) translate(0 10)"/>
+            </g>
+            <g id="double_middle">
+                <line id="double_long_2" y2="282" x2="400" y1="357" x1="400" fill="none"/>
+                <use href="#double_cross_line" transform="translate(45 0)"/>
+                <use href="#double_cross_line" transform="rotate(10, 312, 305) translate(45 10)"/>
+            </g>
+            <g id="double_right">
+                <line id="double_long_3" y2="282" x2="445" y1="357" x1="415" fill="none"/>
+                <use href="#double_cross_line" transform="translate(90 0)"/>
+                <use href="#double_cross_line" transform="rotate(10, 352, 270) translate(90 10)"/>
+            </g>
+        </g>
+
+        <g id="2_chain_corner" transform="rotate(45, 400, 400)"> <!-- corners of first circle of doubles -->
+            <use href="#chain" transform="rotate(-30, 400, 400) translate(55 -100)"/>
+            <use href="#chain" transform="rotate(30, 400, 400) translate(-55 -100)"/>
+        </g>
+        <g id="chain_doubles" transform="rotate(90, 400, 400)"> <!-- 3 doubles arranged in \|/ orientation -->
+            <ellipse id="slip_stitch" ry="3" rx="3" cx="475" cy="415" transform="rotate(-90, 400, 400) translate(-50 -30)"/>
+            <g id="chain_double_left" transform="rotate(65, 400, 400) translate(0 25)">
+                <use href="#chain" transform="translate(-55 10)"/>
+                <use href="#chain" transform="translate(-85 10)"/>
+                <use href="#chain" transform="translate(-115 10)"/>
+                <use href="#slip_stitch" transform="translate(-115 -5)"/>
+            </g>
+            <use href="#double_middle"/>
+            <use href="#double_right"/>
+        </g>
+
+        <use href="#2_chain_corner" transform="rotate(90, 400, 400)"/>
+
+        <use href="#3_doubles" transform="rotate(180, 400, 400)"/>
+        <use href="#2_chain_corner" transform="rotate(180, 400, 400)"/>
+
+        <use href="#3_doubles" transform="rotate(-90, 400, 400)"/>
+        <use href="#2_chain_corner" transform="rotate(-90, 400, 400)"/>
+    </g>
+
+    <g id="round_3" stroke="green" fill="green"> <!-- second circle of doubles -->
+        <g id="2_double_sets">
+            <use href="#3_doubles" transform="translate(-90 -90)"/>
+            <g id="chain_3_doubles">
+                <use href="#chain" transform="translate(0 -180)" />
+                <use href="#3_doubles" transform="translate(90 -90)"/>
+            </g>
+        </g>
+
+        <use href="#2_chain_corner" transform="rotate(0, 400, 400) translate(90 -90)"/>
+        <use href="#chain_doubles" transform="translate(90 -90)"/>
+        <use href="#chain_3_doubles" transform="rotate(90, 400, 400)" />
+
+        <use href="#2_chain_corner" transform="rotate(90, 400, 400) translate(90 -90)"/>
+        <use href="#2_double_sets" transform="rotate(180, 400, 400)"/>
+
+        <use href="#2_chain_corner" transform="rotate(180, 400, 400) translate(90 -90)"/>
+        <use href="#2_double_sets" transform="rotate(-90, 400, 400)"/>
+
+        <use href="#2_chain_corner" transform="rotate(-90, 400, 400) translate(90 -90)"/>
+    </g>
+
+    <g id="round_4" stroke="purple" fill="purple"> <!-- third circle of doubles -->
+        <g id="3_double_sets">
+            <use href="#3_doubles" transform="translate(-180 -180)"/>
+            <use href="#chain_3_doubles" transform="translate(-90 -90)"/>
+            <use href="#chain_3_doubles" transform="translate(90 -90)"/>
+        </g>
+
+        <use href="#2_chain_corner" transform="rotate(0, 400, 400) translate(180 -180)"/>
+        <use href="#chain_doubles" transform="translate(180 -180)"/>
+        <use href="#chain_3_doubles" transform="rotate(90, 400, 400) translate(-90 -90)"/>
+        <use href="#chain_3_doubles" transform="rotate(90, 400, 400) translate(90 -90)"/>
+
+        <use href="#2_chain_corner" transform="rotate(90, 400, 400) translate(180 -180)"/>
+        <use href="#3_double_sets" transform="rotate(180, 400, 400)"/>
+
+        <use href="#2_chain_corner" transform="rotate(180, 400, 400) translate(180 -180)"/>
+        <use href="#3_double_sets" transform="rotate(-90, 400, 400)"/>
+
+        <use href="#2_chain_corner" transform="rotate(-90, 400, 400) translate(180 -180)"/>
+    </g>
+
+    <g id="round_5" stroke="orange" fill="orange"> <!-- fourth circle of doubles -->
+        <g id="4_double_sets">
+            <use href="#3_doubles" transform="translate(-270 -270)"/>
+            <use href="#chain_3_doubles" transform="translate(-180 -180)"/>
+            <use href="#chain_3_doubles" transform="translate(0 -180)"/>
+            <use href="#chain_3_doubles" transform="translate(180 -180)"/>
+        </g>
+
+        <use href="#2_chain_corner" transform="rotate(0, 400, 400) translate(270 -270)"/>
+        <use href="#chain_doubles" transform="translate(270 -270)"/>
+        <use href="#chain_3_doubles" transform="rotate(90, 400, 400) translate(-180 -180)"/>
+        <use href="#chain_3_doubles" transform="rotate(90, 400, 400) translate(0 -180)"/>
+        <use href="#chain_3_doubles" transform="rotate(90, 400, 400) translate(180 -180)"/>
+
+        <use href="#2_chain_corner" transform="rotate(90, 400, 400) translate(270 -270)"/>
+        <use href="#4_double_sets" transform="rotate(180, 400, 400)"/>
+
+        <use href="#2_chain_corner" transform="rotate(180, 400, 400) translate(270 -270)"/>
+        <use href="#4_double_sets" transform="rotate(-90, 400, 400)"/>
+
+        <use href="#2_chain_corner" transform="rotate(-90, 400, 400) translate(270 -270)"/>
+    </g>
+
+</g>
+</svg>

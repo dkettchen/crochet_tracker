@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PATTERN name="base granny square">
+
+    <ROUND>
+        <ROUND_NO>1</ROUND_NO>
+        <STITCHES>
+            <SIDE side="side_1">
+                <CHAIN stitch="chain_1" type="starting_circle"/>
+            </SIDE>
+
+            <CORNER side="corner_1"></CORNER>
+
+            <SIDE side="side_2">
+                <CHAIN stitch="chain_1" type="starting_circle"/>
+            </SIDE>
+
+            <CORNER side="corner_2"></CORNER>
+
+            <SIDE side="side_3">
+                <CHAIN stitch="chain_1" type="starting_circle"/>
+            </SIDE>
+
+            <CORNER side="corner_3"></CORNER>
+
+            <SIDE side="side_4">
+                <CHAIN stitch="chain_1" type="starting_circle"/>
+            </SIDE>
+
+            <CORNER side="corner_4">
+                <SLIP_STITCH stitch="1">
+                    <ONTO round="1" side="side_1" stitch="1"/>
+                </SLIP_STITCH>
+            </CORNER>
+        </STITCHES>
+    </ROUND>
+
+    <ROUND>
+        <ROUND_NO>2</ROUND_NO>
+        <STITCHES>
+            <SIDE side="side_1">
+                <CHAIN stitch="chain_1" type="double_replacement"/>
+                <CHAIN stitch="chain_2" type="double_replacement"/>
+                <CHAIN stitch="chain_3" type="double_replacement"/>
+            </SIDE>
+
+            <CORNER side="corner_1">
+                <CHAIN stitch="chain_1" type="corner"/>
+                <CHAIN stitch="chain_2" type="corner"/>
+            </CORNER>
+
+            <SIDE side="side_2">
+                <DOUBLE stitch="double_1">
+                    <ONTO round="1" side="side_1" stitch="1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="1" side="side_1" stitch="1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="1" side="side_1" stitch="1"/>
+                </DOUBLE>
+            </SIDE>
+
+            <CORNER side="corner_2">
+                <CHAIN stitch="chain_1" type="corner"/>
+                <CHAIN stitch="chain_2" type="corner"/>
+            </CORNER>
+
+            <SIDE side="side_3">
+                <DOUBLE stitch="double_1">
+                    <ONTO round="1" side="side_2" stitch="1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="1" side="side_2" stitch="1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="1" side="side_2" stitch="1"/>
+                </DOUBLE>
+            </SIDE>
+
+            <CORNER side="corner_3">
+                <CHAIN stitch="chain_1" type="corner"/>
+                <CHAIN stitch="chain_2" type="corner"/>
+            </CORNER>
+
+            <SIDE side="side_4">
+                <DOUBLE stitch="double_1">
+                    <ONTO round="1" side="side_3" stitch="1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="1" side="side_3" stitch="1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="1" side="side_3" stitch="1"/>
+                </DOUBLE>
+            </SIDE>
+
+            <CORNER side="corner_4">
+                <CHAIN stitch="chain_1" type="corner"/>
+                <CHAIN stitch="chain_2" type="corner"/>
+            </CORNER>
+
+            <SIDE side="side_1">
+                <DOUBLE stitch="double_1">
+                    <ONTO round="1" side="side_4" stitch="1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="1" side="side_4" stitch="1"/>
+                </DOUBLE>
+
+                <SLIP_STITCH stitch="1">
+                    <ONTO round="2" side="side_1" stitch="chain_3"/>
+                </SLIP_STITCH>
+            </SIDE>
+        </STITCHES>
+    </ROUND>
+
+    <ROUND>
+        <ROUND_NO>3</ROUND_NO>
+        <STITCHES>
+            <SIDE side="side_1">
+                <CHAIN stitch="chain_1" type="double_replacement"/>
+                <CHAIN stitch="chain_2" type="double_replacement"/>
+                <CHAIN stitch="chain_3" type="double_replacement"/>
+            </SIDE>
+
+            <CORNER side="corner_1">
+                <CHAIN stitch="chain_1" type="corner"/>
+                <CHAIN stitch="chain_2" type="corner"/>
+            </CORNER>
+
+            <SIDE side="side_2">
+                <DOUBLE stitch="double_1">
+                    <ONTO round="2" side="corner_1" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="2" side="corner_1" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="2" side="corner_1" stitch="chain_2"/>
+                </DOUBLE>
+
+                <CHAIN stitch="chain_1" type="connector"/>
+
+                <DOUBLE stitch="double_1">
+                    <ONTO round="2" side="corner_2" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="2" side="corner_2" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="2" side="corner_2" stitch="chain_1"/>
+                </DOUBLE>
+            </SIDE>
+
+            <CORNER side="corner_2">
+                <CHAIN stitch="chain_1" type="corner"/>
+                <CHAIN stitch="chain_2" type="corner"/>
+            </CORNER>
+
+            <SIDE side="side_3">
+                <DOUBLE stitch="double_1">
+                    <ONTO round="2" side="corner_2" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="2" side="corner_2" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="2" side="corner_2" stitch="chain_2"/>
+                </DOUBLE>
+
+                <CHAIN stitch="chain_1" type="connector"/>
+
+                <DOUBLE stitch="double_1">
+                    <ONTO round="2" side="corner_3" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="2" side="corner_3" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="2" side="corner_3" stitch="chain_1"/>
+                </DOUBLE>
+            </SIDE>
+
+            <CORNER side="corner_3">
+                <CHAIN stitch="chain_1" type="corner"/>
+                <CHAIN stitch="chain_2" type="corner"/>
+            </CORNER>
+
+            <SIDE side="side_4">
+                <DOUBLE stitch="double_1">
+                    <ONTO round="2" side="corner_3" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="2" side="corner_3" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="2" side="corner_3" stitch="chain_2"/>
+                </DOUBLE>
+
+                <CHAIN stitch="chain_1" type="connector"/>
+
+                <DOUBLE stitch="double_1">
+                    <ONTO round="2" side="corner_4" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="2" side="corner_4" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="2" side="corner_4" stitch="chain_1"/>
+                </DOUBLE>
+            </SIDE>
+
+            <CORNER side="corner_4">
+                <CHAIN stitch="chain_1" type="corner"/>
+                <CHAIN stitch="chain_2" type="corner"/>
+            </CORNER>
+
+            <SIDE side="side_1">
+                <DOUBLE stitch="double_1">
+                    <ONTO round="2" side="corner_4" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="2" side="corner_4" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="2" side="corner_4" stitch="chain_2"/>
+                </DOUBLE>
+
+                <CHAIN stitch="chain_1" type="connector"/>
+
+                <DOUBLE stitch="double_1">
+                    <ONTO round="2" side="corner_1" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="2" side="corner_1" stitch="chain_1"/>
+                </DOUBLE>
+
+                <SLIP_STITCH stitch="1">
+                    <ONTO round="3" side="side_1" stitch="chain_3"/>
+                </SLIP_STITCH>
+            </SIDE>
+        </STITCHES>
+    </ROUND>
+
+    <ROUND>
+        <ROUND_NO>4</ROUND_NO>
+        <STITCHES>
+            <SIDE side="side_1">
+                <CHAIN stitch="chain_1" type="double_replacement"/>
+                <CHAIN stitch="chain_2" type="double_replacement"/>
+                <CHAIN stitch="chain_3" type="double_replacement"/>
+            </SIDE>
+
+            <CORNER side="corner_1">
+                <CHAIN stitch="chain_1" type="corner"/>
+                <CHAIN stitch="chain_2" type="corner"/>
+            </CORNER>
+
+            <SIDE side="side_2">
+                <DOUBLE stitch="double_1">
+                    <ONTO round="3" side="corner_1" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="3" side="corner_1" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="3" side="corner_1" stitch="chain_2"/>
+                </DOUBLE>
+
+                <CHAIN stitch="chain_1" type="connector"/>
+
+                <DOUBLE stitch="double_1">
+                    <ONTO round="3" side="side_2" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="3" side="side_2" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="3" side="side_2" stitch="chain_1"/>
+                </DOUBLE>
+
+                <CHAIN stitch="chain_2" type="connector"/>
+
+                <DOUBLE stitch="double_1">
+                    <ONTO round="3" side="corner_2" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="3" side="corner_2" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="3" side="corner_2" stitch="chain_1"/>
+                </DOUBLE>
+            </SIDE>
+
+            <CORNER side="corner_2">
+                <CHAIN stitch="chain_1" type="corner"/>
+                <CHAIN stitch="chain_2" type="corner"/>
+            </CORNER>
+
+            <SIDE side="side_3">
+                <DOUBLE stitch="double_1">
+                    <ONTO round="3" side="corner_2" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="3" side="corner_2" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="3" side="corner_2" stitch="chain_2"/>
+                </DOUBLE>
+
+                <CHAIN stitch="chain_1" type="connector"/>
+
+                <DOUBLE stitch="double_1">
+                    <ONTO round="3" side="side_3" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="3" side="side_3" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="3" side="side_3" stitch="chain_1"/>
+                </DOUBLE>
+
+                <CHAIN stitch="chain_2" type="connector"/>
+
+                <DOUBLE stitch="double_1">
+                    <ONTO round="3" side="corner_3" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="3" side="corner_3" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="3" side="corner_3" stitch="chain_1"/>
+                </DOUBLE>
+            </SIDE>
+
+            <CORNER side="corner_3">
+                <CHAIN stitch="chain_1" type="corner"/>
+                <CHAIN stitch="chain_2" type="corner"/>
+            </CORNER>
+
+            <SIDE side="side_4">
+                <DOUBLE stitch="double_1">
+                    <ONTO round="3" side="corner_3" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="3" side="corner_3" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="3" side="corner_3" stitch="chain_2"/>
+                </DOUBLE>
+
+                <CHAIN stitch="chain_1" type="connector"/>
+
+                <DOUBLE stitch="double_1">
+                    <ONTO round="3" side="side_4" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="3" side="side_4" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="3" side="side_4" stitch="chain_1"/>
+                </DOUBLE>
+
+                <CHAIN stitch="chain_2" type="connector"/>
+
+                <DOUBLE stitch="double_1">
+                    <ONTO round="3" side="corner_4" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="3" side="corner_4" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="3" side="corner_4" stitch="chain_1"/>
+                </DOUBLE>
+            </SIDE>
+
+            <CORNER side="corner_4">
+                <CHAIN stitch="chain_1" type="corner"/>
+                <CHAIN stitch="chain_2" type="corner"/>
+            </CORNER>
+
+            <SIDE side="side_1">
+                <DOUBLE stitch="double_1">
+                    <ONTO round="3" side="corner_4" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="3" side="corner_4" stitch="chain_2"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="3" side="corner_4" stitch="chain_2"/>
+                </DOUBLE>
+
+                <CHAIN stitch="chain_1" type="connector"/>
+
+                <DOUBLE stitch="double_1">
+                    <ONTO round="3" side="side_1" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="3" side="side_1" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_3">
+                    <ONTO round="3" side="side_1" stitch="chain_1"/>
+                </DOUBLE>
+
+                <CHAIN stitch="chain_2" type="connector"/>
+
+                <DOUBLE stitch="double_1">
+                    <ONTO round="3" side="corner_1" stitch="chain_1"/>
+                </DOUBLE>
+                <DOUBLE stitch="double_2">
+                    <ONTO round="3" side="corner_1" stitch="chain_1"/>
+                </DOUBLE>
+
+                <SLIP_STITCH stitch="1">
+                    <ONTO round="4" side="side_1" stitch="chain_3"/>
+                </SLIP_STITCH>
+            </SIDE>
+        </STITCHES>
+    </ROUND>
+
+</PATTERN>

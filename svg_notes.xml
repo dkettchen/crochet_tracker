@@ -1,0 +1,78 @@
+<examples>
+
+    <!-- this makes a yellow circle with green stroke -->
+    <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+    <!-- 
+    xmlns defines namespace, this namespace identifies svg elements inside HTML doc
+    cx & cy defined the centre of the circle's coordinates
+    r = radius
+    -->
+
+    <!-- this makes a rectangle containing a circle containing some text -->
+    <svg width="150" height="100" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100%" height="100%" fill="green" />
+        <circle cx="75" cy="50" r="40" fill="yellow" />
+        <text x="75" y="60" font-size="30" text-anchor="middle" fill="red">
+            SVG
+        </text>
+    </svg>
+    <!-- 
+    coordinate numbers are in relation to width & height defined, it seems
+    text anchor defines placement of midpoint of text
+    text is not self-closing, it has a text value
+    -->
+
+    <!-- 
+    available shapes to use
+        Rectangle <rect>
+            width, height, x/y (position of top-left corner), rx/ry (rounding corner radius)
+        Circle <circle>
+        Ellipse <ellipse>
+        Line <line>
+        Polyline <polyline>
+        Polygon <polygon>
+        Path <path>
+    -->
+    <!-- 
+    you can also add a style attribute to define css properties:
+    ex style="fill:rgb(0,0,255);stroke-width:3;stroke:red" in our rectangle tag
+        The style attribute is used to define CSS properties for the rectangle
+        The CSS fill property defines the fill color of the rectangle
+        The CSS stroke-width property defines the width of the border of the rectangle
+        The CSS stroke property defines the color of the border of the rectangle
+    -->
+
+    <!-- an ellipse -->
+    <svg height="140" width="500" xmlns="http://www.w3.org/2000/svg">
+        <ellipse rx="100" ry="50" cx="120" cy="80"
+        style="fill:yellow;stroke:green;stroke-width:3" />
+    </svg> 
+    <!-- 
+    The rx attribute defines the x (horizontal) radius
+    The ry attribute defines the y (vertical) radius
+    The cx attribute defines the x-axis center of the ellipse
+    The cy attribute defines the y-axis center of the ellipse
+    -->
+    <!-- Q: can we rotate an ellipse? for our crochet patterns later -->
+
+    <!-- a line -->
+    <svg height="200" width="300" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="0" x2="300" y2="200" style="stroke:red;stroke-width:2" />
+    </svg> 
+    <!-- takes coordinates for start & end of line -->
+
+    <!-- a polygon - 5 pointed star -->
+    <svg height="210" width="500" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="100,10 40,198 190,78 10,78 160,198"
+        style="fill:lime;stroke:purple;stroke-width:5;" />
+    </svg> 
+
+    <!-- polyline = line with multiple points, like on a line graph f.e. 
+    points' coords. are listed same as on polygon
+    -->
+
+    <!-- where I left off: https://www.w3schools.com/graphics/svg_path.asp -->
+
+</examples>

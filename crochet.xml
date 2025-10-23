@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<STITCHES
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="crochet.xsd"
+>
+    <STITCH>
+        <NAME>chain stitch</NAME>
+        <ABBREVIATION>ch</ABBREVIATION>
+        <LENGTH>1</LENGTH>
+        <SYMBOL>oval circle</SYMBOL>
+    </STITCH>
+    <STITCH>
+        <NAME>slip stitch</NAME>
+        <ABBREVIATION>sl st</ABBREVIATION>
+        <LENGTH>1</LENGTH>
+        <SYMBOL>black dot</SYMBOL>
+    </STITCH>
+    <STITCH>
+        <NAME>double crochet</NAME>
+        <ABBREVIATION>dc</ABBREVIATION>
+        <LENGTH>2</LENGTH>
+        <SYMBOL>T with one extra line</SYMBOL>
+    </STITCH>
+    <!-- TODO: add svg template code for symbols -->
+    <!-- TODO: find or make stitch tutorial images for each stitch -->
+    <!-- TODO: add more stitches once we add other patterns! -->
+</STITCHES>

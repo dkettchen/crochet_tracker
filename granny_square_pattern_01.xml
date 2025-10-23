@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PATTERN name="base granny square">
+
+    <!-- ROUND round="round_[roundno]" -->
+        <!-- SIDE id="side_[roundno].[sideno]" -->
+
+    <!-- CHAINED type="[ start_circle | corner | double_replacement | [no of]_doubles ]" -->
+    
+    <!-- SLIP_STITCH id="slip_[roundno].[stitchno]" -->
+    <!-- CHAIN id="[ corner | connector | double ]_chain_[roundno].([sectionno].)[stitchno]" -->
+    <!-- DOUBLE id="double_[roundno].[sideno].[sectionno].[stitchno]" -->
+
+
+    <ROUND round="round_1">
+        <CHAINED type="start_circle">
+            <CHAIN id="start_chain_1.1"/>
+            <CHAIN id="start_chain_1.2"/>
+            <CHAIN id="start_chain_1.3"/>
+            <CHAIN id="start_chain_1.4"/>
+        </CHAINED>
+    </ROUND>
+
+    <ROUND round="round_2">
+
+        <SLIP_STITCH id="slip_2.1" onto="start_chain_1.1"/>
+
+        <SIDE id="side_2.4">
+            <CHAINED type="double_replacement">
+                <CHAIN id="double_chain_2.1"/>
+                <CHAIN id="double_chain_2.2"/>
+                <CHAIN id="double_chain_2.3"/>
+            </CHAINED>
+        </SIDE>
+
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_2.1.1"/>
+            <CHAIN id="corner_chain_2.1.2"/>
+        </CHAINED>
+
+        <SIDE id="side_2.1">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_2.1.1.1" onto="start_chain_1.1"/>
+                <DOUBLE id="double_2.1.1.2" onto="start_chain_1.1"/>
+                <DOUBLE id="double_2.1.1.3" onto="start_chain_1.1"/>
+            </CHAINED>
+        </SIDE>
+
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_2.2.1"/>
+            <CHAIN id="corner_chain_2.2.2"/>
+        </CHAINED>
+
+        <SIDE id="side_2.2">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_2.2.1.1" onto="start_chain_1.2"/>
+                <DOUBLE id="double_2.2.1.2" onto="start_chain_1.2"/>
+                <DOUBLE id="double_2.2.1.3" onto="start_chain_1.2"/>
+            </CHAINED>
+        </SIDE>
+
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_2.3.1"/>
+            <CHAIN id="corner_chain_2.3.2"/>
+        </CHAINED>
+
+        <SIDE id="side_2.3">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_2.3.1.1" onto="start_chain_1.3"/>
+                <DOUBLE id="double_2.3.1.2" onto="start_chain_1.3"/>
+                <DOUBLE id="double_2.3.1.3" onto="start_chain_1.3"/>
+            </CHAINED>            
+        </SIDE>
+
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_2.4.1"/>
+            <CHAIN id="corner_chain_2.4.2"/>
+        </CHAINED>
+
+        <SIDE id="side_2.4">
+            <CHAINED type="2_doubles">
+                <DOUBLE id="double_2.4.1.1" onto="start_chain_1.4"/>
+                <DOUBLE id="double_2.4.1.2" onto="start_chain_1.4"/>
+            </CHAINED>
+        </SIDE>
+
+        <SLIP_STITCH id="slip_2.2" onto="double_chain_2.3"/>
+
+    </ROUND>
+
+    <ROUND round="round_3">
+
+        <SLIP_STITCH id="slip_3.1" onto="corner_chain_2.1.1"/>
+    
+        <SIDE id="side_3.4">
+            <CHAINED type="double_replacement">
+                <CHAIN id="double_chain_3.1"/>
+                <CHAIN id="double_chain_3.2"/>
+                <CHAIN id="double_chain_3.3"/>
+            </CHAINED>
+        </SIDE>
+        
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_3.1.1"/>
+            <CHAIN id="corner_chain_3.1.2"/>
+        </CHAINED>
+    
+        <SIDE id="side_3.1">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_3.1.1.1" onto="corner_chain_2.1.2"/>
+                <DOUBLE id="double_3.1.1.2" onto="corner_chain_2.1.2"/>
+                <DOUBLE id="double_3.1.1.3" onto="corner_chain_2.1.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_3.1.1"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_3.1.2.1" onto="corner_chain_2.2.1"/>
+                <DOUBLE id="double_3.1.2.2" onto="corner_chain_2.2.1"/>
+                <DOUBLE id="double_3.1.2.3" onto="corner_chain_2.2.1"/>
+            </CHAINED>
+        </SIDE>
+
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_3.2.1"/>
+            <CHAIN id="corner_chain_3.2.2"/>
+        </CHAINED>
+
+        <SIDE id="side_3.2">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_3.2.1.1" onto="corner_chain_2.2.2"/>
+                <DOUBLE id="double_3.2.1.2" onto="corner_chain_2.2.2"/>
+                <DOUBLE id="double_3.2.1.3" onto="corner_chain_2.2.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_3.2.1"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_3.2.2.1" onto="corner_chain_2.3.1"/>
+                <DOUBLE id="double_3.2.2.2" onto="corner_chain_2.3.1"/>
+                <DOUBLE id="double_3.2.2.3" onto="corner_chain_2.3.1"/>
+            </CHAINED>
+        </SIDE>
+
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_3.3.1"/>
+            <CHAIN id="corner_chain_3.3.2"/>
+        </CHAINED>
+    
+        <SIDE id="side_3.3">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_3.3.1.1" onto="corner_chain_2.3.2"/>
+                <DOUBLE id="double_3.3.1.2" onto="corner_chain_2.3.2"/>
+                <DOUBLE id="double_3.3.1.3" onto="corner_chain_2.3.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_3.3.1"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_3.3.2.1" onto="corner_chain_2.4.1"/>
+                <DOUBLE id="double_3.3.2.2" onto="corner_chain_2.4.1"/>
+                <DOUBLE id="double_3.3.2.3" onto="corner_chain_2.4.1"/>
+            </CHAINED>
+        </SIDE>
+    
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_3.4.1"/>
+            <CHAIN id="corner_chain_3.4.2"/>
+        </CHAINED>
+    
+        <SIDE id="side_3.4">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_3.4.1.1" onto="corner_chain_2.4.2"/>
+                <DOUBLE id="double_3.4.1.2" onto="corner_chain_2.4.2"/>
+                <DOUBLE id="double_3.4.1.3" onto="corner_chain_2.4.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_3.4.1"/>
+            <CHAINED type="2_doubles">
+                <DOUBLE id="double_3.4.2.1" onto="corner_chain_2.1.1"/>
+                <DOUBLE id="double_3.4.2.2" onto="corner_chain_2.1.1"/>
+            </CHAINED>
+        </SIDE>
+    
+        <SLIP_STITCH id="slip_3.2" onto="double_chain_3.3"/>
+    
+    </ROUND>
+    
+    <ROUND round="round_4">
+
+        <SLIP_STITCH id="slip_4.1" onto="corner_chain_3.1.1"/>
+    
+        <SIDE id="side_4.4">
+            <CHAINED type="double_replacement">
+                <CHAIN id="double_chain_4.1"/>
+                <CHAIN id="double_chain_4.2"/>
+                <CHAIN id="double_chain_4.3"/>
+            </CHAINED>
+        </SIDE>
+    
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_4.1.1"/>
+            <CHAIN id="corner_chain_4.1.2"/>
+        </CHAINED>
+    
+        <SIDE id="side_4.1">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_4.1.1.1" onto="corner_chain_3.1.2"/>
+                <DOUBLE id="double_4.1.1.2" onto="corner_chain_3.1.2"/>
+                <DOUBLE id="double_4.1.1.3" onto="corner_chain_3.1.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_4.1.1"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_4.1.2.1" onto="connector_chain_3.1.1"/>
+                <DOUBLE id="double_4.1.2.2" onto="connector_chain_3.1.1"/>
+                <DOUBLE id="double_4.1.2.3" onto="connector_chain_3.1.1"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_4.1.2"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_4.1.3.1" onto="corner_chain_3.2.1"/>
+                <DOUBLE id="double_4.1.3.2" onto="corner_chain_3.2.1"/>
+                <DOUBLE id="double_4.1.3.3" onto="corner_chain_3.2.1"/>
+            </CHAINED>
+        </SIDE>
+
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_4.2.1"/>
+            <CHAIN id="corner_chain_4.2.2"/>
+        </CHAINED>
+    
+        <SIDE id="side_4.2">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_4.2.1.1" onto="corner_chain_3.2.2"/>
+                <DOUBLE id="double_4.2.1.2" onto="corner_chain_3.2.2"/>
+                <DOUBLE id="double_4.2.1.3" onto="corner_chain_3.2.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_4.2.1"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_4.2.2.1" onto="connector_chain_3.2.1"/>
+                <DOUBLE id="double_4.2.2.2" onto="connector_chain_3.2.1"/>
+                <DOUBLE id="double_4.2.2.3" onto="connector_chain_3.2.1"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_4.2.2"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_4.2.3.1" onto="corner_chain_3.3.1"/>
+                <DOUBLE id="double_4.2.3.2" onto="corner_chain_3.3.1"/>
+                <DOUBLE id="double_4.2.3.3" onto="corner_chain_3.3.1"/>
+            </CHAINED>
+        </SIDE>
+    
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_4.3.1"/>
+            <CHAIN id="corner_chain_4.3.2"/>
+        </CHAINED>
+
+        <SIDE id="side_4.3">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_4.3.1.1" onto="corner_chain_3.3.2"/>
+                <DOUBLE id="double_4.3.1.2" onto="corner_chain_3.3.2"/>
+                <DOUBLE id="double_4.3.1.3" onto="corner_chain_3.3.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_4.3.1"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_4.3.2.1" onto="connector_chain_3.3.1"/>
+                <DOUBLE id="double_4.3.2.2" onto="connector_chain_3.3.1"/>
+                <DOUBLE id="double_4.3.2.3" onto="connector_chain_3.3.1"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_4.3.2"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_4.3.3.1" onto="corner_chain_3.4.1"/>
+                <DOUBLE id="double_4.3.3.2" onto="corner_chain_3.4.1"/>
+                <DOUBLE id="double_4.3.3.3" onto="corner_chain_3.4.1"/>
+            </CHAINED>
+        </SIDE>
+    
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_4.4.1"/>
+            <CHAIN id="corner_chain_4.4.2"/>
+        </CHAINED>
+    
+        <SIDE id="side_4.4">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_4.4.1.1" onto="corner_chain_3.4.2"/>
+                <DOUBLE id="double_4.4.1.2" onto="corner_chain_3.4.2"/>
+                <DOUBLE id="double_4.4.1.3" onto="corner_chain_3.4.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_4.4.1"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_4.4.2.1" onto="connector_chain_3.4.1"/>
+                <DOUBLE id="double_4.4.2.2" onto="connector_chain_3.4.1"/>
+                <DOUBLE id="double_4.4.2.3" onto="connector_chain_3.4.1"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_4.4.2"/>
+            <CHAINED type="2_doubles">
+                <DOUBLE id="double_4.4.3.1" onto="corner_chain_3.1.1"/>
+                <DOUBLE id="double_4.4.3.2" onto="corner_chain_3.1.1"/>
+            </CHAINED>
+        </SIDE>
+    
+        <SLIP_STITCH id="slip_4.2" onto="double_chain_4.3"/>
+    
+    </ROUND>
+
+    <ROUND round="round_5">
+
+        <SLIP_STITCH id="slip_5.1" onto="corner_chain_4.1.1"/>
+    
+        <SIDE id="side_5.4">
+            <CHAINED type="double_replacement">
+                <CHAIN id="double_chain_5.1"/>
+                <CHAIN id="double_chain_5.2"/>
+                <CHAIN id="double_chain_5.3"/>
+            </CHAINED>
+        </SIDE>
+    
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_5.1.1"/>
+            <CHAIN id="corner_chain_5.1.2"/>
+        </CHAINED>
+    
+        <SIDE id="side_5.1">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.1.1.1" onto="corner_chain_4.1.2"/>
+                <DOUBLE id="double_5.1.1.2" onto="corner_chain_4.1.2"/>
+                <DOUBLE id="double_5.1.1.3" onto="corner_chain_4.1.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_5.1.1"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.1.2.1" onto="connector_chain_4.1.1"/>
+                <DOUBLE id="double_5.1.2.2" onto="connector_chain_4.1.1"/>
+                <DOUBLE id="double_5.1.2.3" onto="connector_chain_4.1.1"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_5.1.2"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.1.3.1" onto="connector_chain_4.1.2"/>
+                <DOUBLE id="double_5.1.3.2" onto="connector_chain_4.1.2"/>
+                <DOUBLE id="double_5.1.3.3" onto="connector_chain_4.1.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_5.1.3"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.1.4.1" onto="corner_chain_4.2.1"/>
+                <DOUBLE id="double_5.1.4.2" onto="corner_chain_4.2.1"/>
+                <DOUBLE id="double_5.1.4.3" onto="corner_chain_4.2.1"/>
+            </CHAINED>
+        </SIDE>
+    
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_5.2.1"/>
+            <CHAIN id="corner_chain_5.2.2"/>
+        </CHAINED>
+    
+        <SIDE id="side_5.2">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.2.1.1" onto="corner_chain_4.2.2"/>
+                <DOUBLE id="double_5.2.1.2" onto="corner_chain_4.2.2"/>
+                <DOUBLE id="double_5.2.1.3" onto="corner_chain_4.2.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_5.2.1"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.2.2.1" onto="connector_chain_4.2.1"/>
+                <DOUBLE id="double_5.2.2.2" onto="connector_chain_4.2.1"/>
+                <DOUBLE id="double_5.2.2.3" onto="connector_chain_4.2.1"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_5.2.2"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.2.3.1" onto="connector_chain_4.2.2"/>
+                <DOUBLE id="double_5.2.3.2" onto="connector_chain_4.2.2"/>
+                <DOUBLE id="double_5.2.3.3" onto="connector_chain_4.2.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_5.2.3"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.2.4.1" onto="corner_chain_4.3.1"/>
+                <DOUBLE id="double_5.2.4.2" onto="corner_chain_4.3.1"/>
+                <DOUBLE id="double_5.2.4.3" onto="corner_chain_4.3.1"/>
+            </CHAINED>
+        </SIDE>
+    
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_5.3.1"/>
+            <CHAIN id="corner_chain_5.3.2"/>
+        </CHAINED>
+    
+        <SIDE id="side_5.3">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.3.1.1" onto="corner_chain_4.3.2"/>
+                <DOUBLE id="double_5.3.1.2" onto="corner_chain_4.3.2"/>
+                <DOUBLE id="double_5.3.1.3" onto="corner_chain_4.3.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_5.3.1"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.3.2.1" onto="connector_chain_4.3.1"/>
+                <DOUBLE id="double_5.3.2.2" onto="connector_chain_4.3.1"/>
+                <DOUBLE id="double_5.3.2.3" onto="connector_chain_4.3.1"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_5.3.2"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.3.3.1" onto="connector_chain_4.3.2"/>
+                <DOUBLE id="double_5.3.3.2" onto="connector_chain_4.3.2"/>
+                <DOUBLE id="double_5.3.3.3" onto="connector_chain_4.3.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_5.3.3"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.3.4.1" onto="corner_chain_4.4.1"/>
+                <DOUBLE id="double_5.3.4.2" onto="corner_chain_4.4.1"/>
+                <DOUBLE id="double_5.3.4.3" onto="corner_chain_4.4.1"/>
+            </CHAINED>
+        </SIDE>
+    
+        <CHAINED type="corner">
+            <CHAIN id="corner_chain_5.4.1"/>
+            <CHAIN id="corner_chain_5.4.2"/>
+        </CHAINED>
+    
+        <SIDE id="side_5.4">
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.4.1.1" onto="corner_chain_4.4.2"/>
+                <DOUBLE id="double_5.4.1.2" onto="corner_chain_4.4.2"/>
+                <DOUBLE id="double_5.4.1.3" onto="corner_chain_4.4.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_5.4.1"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.4.2.1" onto="connector_chain_4.4.1"/>
+                <DOUBLE id="double_5.4.2.2" onto="connector_chain_4.4.1"/>
+                <DOUBLE id="double_5.4.2.3" onto="connector_chain_4.4.1"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_5.4.2"/>
+            <CHAINED type="3_doubles">
+                <DOUBLE id="double_5.4.3.1" onto="connector_chain_4.4.2"/>
+                <DOUBLE id="double_5.4.3.2" onto="connector_chain_4.4.2"/>
+                <DOUBLE id="double_5.4.3.3" onto="connector_chain_4.4.2"/>
+            </CHAINED>
+            <CHAIN id="connector_chain_5.4.3"/>
+            <CHAINED type="2_doubles">
+                <DOUBLE id="double_5.4.4.1" onto="corner_chain_4.1.1"/>
+                <DOUBLE id="double_5.4.4.2" onto="corner_chain_4.1.1"/>
+            </CHAINED>
+        </SIDE>
+    
+        <SLIP_STITCH id="slip_5.2" onto="double_chain_5.3"/>
+    
+    </ROUND>
+    
+</PATTERN>
