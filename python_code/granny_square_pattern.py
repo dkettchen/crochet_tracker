@@ -1,32 +1,21 @@
-from copy import deepcopy
+def granny_square(rounds:int) -> list[str]:
+    """
+    creates a list of stitches as used in a granny square pattern
 
-chain={
-    "stitch":"chain",
-}
-double = {
-    "stitch": "double",
-}
+    takes the number of rounds desired
 
-starting_circle = [chain, chain, chain, chain]
-double_replacement = [chain, chain, chain]
-corner = [chain, chain]
-three_doubles = [double, double, double]
-filler_doubles = [double, double]
-
-
-def granny_square(rounds:int):
-
-    # TODO first make it so we have all the stitches in order, worry abt the connections later
+    returns the list of stitch names
+    """
 
     pattern = []
     connector_counter = 0
 
     for round in range(rounds):
-        if round == 0:
+        if round == 0: # first round is 4 chains
             for _ in range(4):
                 pattern.append("chain")
-        else:
-            # connect
+        else: # every subsequent round
+            # connect/prep round
             pattern.append("slip stitch")
 
             # 3 chains to replace the first double
@@ -35,12 +24,19 @@ def granny_square(rounds:int):
 
             # for each side
             for side in range(4):
-
                 # add corner chains
                 for _ in range(2):
                     pattern.append("chain")
-                
+
                 # add doubles
+
+                # extras if any
+                for _ in range(connector_counter):
+                    for _ in range(3):
+                        pattern.append("double")
+                    pattern.append("chain")
+
+                # last one of side
                 if side == 3: # last side only needs 2
                     for _ in range(2):
                         pattern.append("double")
@@ -48,6 +44,26 @@ def granny_square(rounds:int):
                     for _ in range(3):
                         pattern.append("double")
             
+            # increment counter of how many connector chains we have for next round
+            connector_counter += 1
 
+            # connect
+            pattern.append("slip stitch")
 
+    # return finished pattern
     return pattern
+
+
+# TODO 
+
+# general tasks/features to implement
+# - translate this logic to js for ease of UI later
+    # - learn how to write js code tests
+# - generate visuals for given pattern's stitches as svg
+    # - go through generated pattern list w maybe a case argument to identify which pattern it is
+    # - create, choose & transform relevant stitch visuals accordingly to compile a svg pattern
+# - UI that goes through stitches in order & colour codes where you're at
+
+# extension tasks: 
+# - which previous stitch relevant stitches need to connect to?
+# - other base patterns & vis

@@ -34,7 +34,55 @@ def test_for_2_rounds_returns_first_round_of_granny_square():
         "double", "double", 
         "slip stitch", 
     ]
-# def test_for_3_rounds_returns_appropriately_increasing_rounds_of_granny_square():
-#     pass
-# def test_for_4_rounds_returns_appropriately_increasing_rounds_of_granny_square():
-#     pass
+def test_for_3_rounds_returns_appropriately_increasing_rounds_of_granny_square():
+    pattern = granny_square(3)
+    assert pattern == granny_square(2) + [
+        "slip stitch", "chain", "chain", "chain", 
+        "chain", "chain", 
+        "double", "double", "double",
+        "chain",
+        "double", "double", "double",
+        "chain", "chain", 
+        "double", "double", "double",
+        "chain",
+        "double", "double", "double",
+        "chain", "chain", 
+        "double", "double", "double",
+        "chain",
+        "double", "double", "double",
+        "chain", "chain", 
+        "double", "double", "double",
+        "chain",
+        "double", "double", 
+        "slip stitch", 
+    ]
+def test_for_4_rounds_returns_appropriately_increasing_rounds_of_granny_square():
+    pattern = granny_square(4)
+    assert pattern == granny_square(3) + [
+        "slip stitch", "chain", "chain", "chain", 
+        "chain", "chain", 
+        "double", "double", "double",
+        "chain",
+        "double", "double", "double",
+        "chain",
+        "double", "double", "double",
+        "chain", "chain", 
+        "double", "double", "double",
+        "chain",
+        "double", "double", "double",
+        "chain",
+        "double", "double", "double",
+        "chain", "chain", 
+        "double", "double", "double",
+        "chain",
+        "double", "double", "double",
+        "chain",
+        "double", "double", "double",
+        "chain", "chain", 
+        "double", "double", "double",
+        "chain",
+        "double", "double", "double",
+        "chain",
+        "double", "double", 
+        "slip stitch", 
+    ]
