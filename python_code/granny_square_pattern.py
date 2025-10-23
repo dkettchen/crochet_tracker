@@ -54,10 +54,13 @@ def granny_square(rounds:int) -> list[str]:
     return pattern
 
 
+if __name__ == "__main__":
+    print(granny_square(2))
+
 # TODO 
 
 # general tasks/features to implement
-# - translate this logic to js for ease of UI later
+# - translate this logic to js for ease of UI later ✅
     # - learn how to write js code tests
 # - generate visuals for given pattern's stitches as svg
     # - go through generated pattern list w maybe a case argument to identify which pattern it is
