@@ -204,3 +204,9 @@ ajax tutorial: https://www.w3schools.com/xml/ajax_intro.asp
         Send data to a server - in the background
 -> useful for later
 -AJAX stands for Asynchronous JavaScript And XML.
+
+
+
+
+venv/Scripts/Activate
+$env:PYTHONPATH = "C:\Users\Ren\Documents\crochet_tracker"
