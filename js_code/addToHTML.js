@@ -1,7 +1,5 @@
-import { grannySquare } from "./grannySquarePattern.js";
-import { makeGrannySquareVector } from "./makeVectorGraphics.js";
+import { makeGrannySquareVector } from "./grannySquare.js";
 
-let pattern = grannySquare(3);
 let svg = makeGrannySquareVector(7);
 
 let item = document.getElementById("svg_placeholder");
