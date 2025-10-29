@@ -6,7 +6,7 @@ import Stitch from "./stitchClass.js";
  * @param {Number} rounds 
  * @returns {Array}
  */
-function grannySquare(rounds) {
+export function grannySquare(rounds) {
 
     // compile stitches in order, including stitches they're connected to
 
@@ -127,7 +127,7 @@ function grannySquare(rounds) {
     return pattern;
 }
 
-console.log(grannySquare(2))
+// console.log(grannySquare(2))
 
 
 // TODO: 
